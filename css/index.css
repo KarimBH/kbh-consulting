@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro:400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro:400, 600);
 
 * {
   margin: 0;
@@ -20,11 +20,13 @@ body {
   background: #101214;
   font-size: 18px;
   -webkit-text-size-adjust: 100%;
-  color: #7A7C80;
+  color: #7a7c80;
   min-height: 100%;
+  overflow: hidden;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
   font-size: 25px;
   color: white;
@@ -38,7 +40,7 @@ h1, h2 {
   right: 0;
 }
 
-#page {
+#landingPage {
   position: absolute;
   top: 50%;
   left: 0;
@@ -47,12 +49,30 @@ h1, h2 {
   height: 560px;
 }
 
-@media only screen and (max-height: 580px),
-       only screen and (max-width: 578px) {
-  #page {
+@media only screen and (max-height: 580px), only screen and (max-width: 578px) {
+  #landingPage {
     top: 14px;
     margin-top: 0;
   }
+}
+
+.page {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100hw;
+  min-width: 100hw;
+  max-width: 100hw;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1%;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 2%;
 }
 
 header {
@@ -100,7 +120,7 @@ header {
 }
 
 #contact a svg path {
-  fill: #7A7C80;
+  fill: #7a7c80;
 }
 #contact a:hover svg path {
   fill: #adb0b6;
@@ -134,7 +154,7 @@ section ul {
 }
 
 section ul a {
-  color: #7A7C80;
+  color: #7a7c80;
   text-decoration: none;
 }
 section ul a:hover {
@@ -153,10 +173,10 @@ a.more svg {
 }
 
 a.more {
-  color: #B0B1B3;
+  color: #b0b1b3;
 }
 a.more .arrow {
-  fill: #B0B1B3;
+  fill: #b0b1b3;
 }
 a.more:hover {
   color: #adb0b6;
@@ -181,7 +201,8 @@ a.more:hover .arrow {
     top: -33px;
   }
 
-  #header-content h1, #header-content p {
+  #header-content h1,
+  #header-content p {
     left: 24px;
     margin-left: 0;
   }
@@ -228,4 +249,13 @@ a.more:hover .arrow {
 
 .hidden {
   display: none;
+}
+
+.term-definition + .term-definition {
+  margin-top: 1%;
+}
+
+.term-definition .definition {
+  color: #b0b1b3;
+  padding-left: 10px;
 }
